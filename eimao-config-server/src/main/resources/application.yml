@@ -1,0 +1,25 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true #使用ip注册
+
+
+spring:
+  application:
+    name: config-server
+#  profiles:
+#    active: native #告诉服务,我现在要启用本地配置(优先考虑采用工程目录resources下配置)
+  cloud:
+    config:
+      server:
+         git:    #采用github上的远程配置
+            uri: https://github.com/zhongzhus/eimao.git
+            username: zhongzhus
+            password: qq383672452
+#        native:
+#           search-locations: F:/girRepository/main/eimao/ #明确采用该目录下配置

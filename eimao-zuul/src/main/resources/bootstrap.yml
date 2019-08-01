@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    prefer-ip-address: true #开启ip显示
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVER
+      name: application-server
+      profile: zuul
+
+#spring:
+#  cloud:
+#    config:
+#      name: application-server #github上面的名称
+#      profile: zuul #环境
+#      label: master #分支
+#      uri: http://localhost:5000/ #配置服务器 和下面配置一样

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eimao-basic-parent/eimao-basic-generator/eimao-basic-generator.iml" filepath="$PROJECT_DIR$/eimao-basic-parent/eimao-basic-generator/eimao-basic-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-basic-parent/eimao-basic-parent.iml" filepath="$PROJECT_DIR$/eimao-basic-parent/eimao-basic-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-basic-parent/eimao-basic-util/eimao-basic-util.iml" filepath="$PROJECT_DIR$/eimao-basic-parent/eimao-basic-util/eimao-basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-config-server/eimao-config-server.iml" filepath="$PROJECT_DIR$/eimao-config-server/eimao-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-eureka/eimao-eureka.iml" filepath="$PROJECT_DIR$/eimao-eureka/eimao-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-parent.iml" filepath="$PROJECT_DIR$/eimao-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-plat-parent/eimao-plat-interface/eimao-plat-interface.iml" filepath="$PROJECT_DIR$/eimao-plat-parent/eimao-plat-interface/eimao-plat-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-plat-parent/eimao-plat-parent.iml" filepath="$PROJECT_DIR$/eimao-plat-parent/eimao-plat-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-plat-parent/eimao-plat-service/eimao-plat-service.iml" filepath="$PROJECT_DIR$/eimao-plat-parent/eimao-plat-service/eimao-plat-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-interface/eimao-product-interface.iml" filepath="$PROJECT_DIR$/eimao-product-parent/eimao-product-interface/eimao-product-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-parent.iml" filepath="$PROJECT_DIR$/eimao-product-parent/eimao-product-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-service/eimao-product-service.iml" filepath="$PROJECT_DIR$/eimao-product-parent/eimao-product-service/eimao-product-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eimao-zuul/eimao-zuul.iml" filepath="$PROJECT_DIR$/eimao-zuul/eimao-zuul.iml" />
+    </modules>
+  </component>
+</project>

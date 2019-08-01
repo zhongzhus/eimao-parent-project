@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-basic-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-basic-parent/eimao-basic-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-basic-parent/eimao-basic-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-plat-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-plat-parent/eimao-plat-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-plat-parent/eimao-plat-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-product-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-product-parent/eimao-product-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eimao-zuul" charset="UTF-8" />
+  </component>
+</project>

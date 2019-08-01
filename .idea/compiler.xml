@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eimao-basic-generator" />
+        <module name="eimao-basic-util" />
+        <module name="eimao-config-server" />
+        <module name="eimao-eureka" />
+        <module name="eimao-plat-interface" />
+        <module name="eimao-plat-service" />
+        <module name="eimao-product-interface" />
+        <module name="eimao-product-service" />
+        <module name="eimao-zuul" />
+        <module name="eimao_basic_util" />
+        <module name="eimao_config_server" />
+        <module name="eimao_eureka" />
+        <module name="eimao_plat_interface" />
+        <module name="eimao_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eimao-basic-generator" target="1.8" />
+      <module name="eimao-basic-parent" target="1.8" />
+      <module name="eimao-basic-util" target="1.8" />
+      <module name="eimao-config-server" target="1.8" />
+      <module name="eimao-eureka" target="1.8" />
+      <module name="eimao-parent" target="1.8" />
+      <module name="eimao-plat-interface" target="1.8" />
+      <module name="eimao-plat-parent" target="1.8" />
+      <module name="eimao-plat-service" target="1.8" />
+      <module name="eimao-product-interface" target="1.8" />
+      <module name="eimao-product-parent" target="1.8" />
+      <module name="eimao-product-service" target="1.8" />
+      <module name="eimao-zuul" target="1.8" />
+      <module name="eimao_basic_parent" target="1.8" />
+      <module name="eimao_basic_util" target="1.5" />
+      <module name="eimao_config_server" target="1.8" />
+      <module name="eimao_eureka" target="1.8" />
+      <module name="eimao_plat_interface" target="1.8" />
+      <module name="eimao_plat_parent" target="1.8" />
+      <module name="eimao_plat_service" target="1.8" />
+      <module name="eimao_zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

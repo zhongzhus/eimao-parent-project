@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true
+ #使用ip注册
+
+#指向配置中心
+#spring:
+#  cloud:
+#    config:
+#      name: application-plat #github上面的名称
+#      profile: server-dev #环境
+#      label: master #分支
+#      uri: http://localhost:5000/ #配置服务器 和下面配置一样
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      name: application-product
+      profile: server-dev
