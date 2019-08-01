@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class BrandServiceTest {
 
+    //测试
     @Autowired
     private IBrandService iBrandService;
     @Test
