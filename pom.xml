@@ -16,6 +16,7 @@
     <module>eimao-plat-parent</module>
     <module>eimao-config-server</module>
     <module>eimao-product-parent</module>
+      <module>eimao-common-parent</module>
   </modules>
 
   <!--继承SpringBoot的parent-->

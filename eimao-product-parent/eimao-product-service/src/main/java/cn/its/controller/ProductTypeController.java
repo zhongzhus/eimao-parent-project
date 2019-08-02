@@ -86,4 +86,19 @@ public class ProductTypeController {
             page = productTypeService.page(page);
             return new PageList<ProductType>(page.getTotal(),page.getRecords());
     }
+
+    /**
+     * 生成主页面
+     * @return
+     */
+    @GetMapping("/getHomePage")
+    public AjaxResult getHomePage(){
+        try {
+            productTypeService.getHomPage();
+            return AjaxResult.me().setSuccess(true).setMsg("成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMsg("失败！");
+        }
+    }
 }

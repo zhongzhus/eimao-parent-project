@@ -1,10 +1,15 @@
 package cn.its.service.impl;
 
+import cn.its.basic.util.AjaxResult;
+import cn.its.common.RedisClient;
+import cn.its.common.StaticPageClient;
 import cn.its.domain.ProductType;
 import cn.its.mapper.ProductTypeMapper;
 import cn.its.service.IProductTypeService;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,6 +29,47 @@ import java.util.zip.Inflater;
 @Service
 public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, ProductType> implements IProductTypeService {
 
+    @Autowired
+    private RedisClient redisClient;
+    @Autowired
+    private StaticPageClient staticPageClient;
+
+    /**
+     * 生成主页面
+     *
+     * 先根据product.type.vm生成一个product.type.vm.html
+     *
+     * 再根据home.vm生成主页面
+     *
+     */
+    @Override
+    public void getHomPage() {
+        //第一步 ： 生成product.type.vm.html
+        Map<String, Object> map = new HashMap<>();
+        String templatePath = "F:\\ideaWorlspace1\\eimao-parent\\eimao-product-parent\\eimao-product-service\\src\\main\\resources\\template\\product.type.vm";
+        String targetPath = "F:\\ideaWorlspace1\\eimao-parent\\eimao-product-parent\\eimao-product-service\\src\\main\\resources\\template\\product.type.vm.html";
+        //model 就是List 存放所有的商品类型
+        List<ProductType> productTypes = loadTypeTree();
+        map.put("model", productTypes);
+        map.put("templatePath", templatePath);
+        map.put("targetPath", targetPath);
+        staticPageClient.getStaticPage(map);
+
+       //第二步 ： 生成home.html
+       templatePath = "F:\\ideaWorlspace1\\eimao-parent\\eimao-product-parent\\eimao-product-service\\src\\main\\resources\\template\\home.vm";
+        targetPath = "F:\\ideaWorlspace1\\eimao-web-parent\\eimao-web-home\\home.html";
+        Map<String, Object> model = new HashMap<String, Object>();
+        //model 中要有一个数据是staticRoot
+        model.put("staticRoot","F:\\ideaWorlspace1\\eimao-parent\\eimao-product-parent\\eimao-product-service\\src\\main\\resources\\");
+        map.put("model",model);
+        map.put("templatePath",templatePath);
+        map.put("targetPath",targetPath);
+
+        staticPageClient.getStaticPage(map);
+    }
+
+
+
     /**
      * 递归方式实现加载类型树
      * 缺点：
@@ -36,8 +82,16 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
     public List<ProductType> loadTypeTree() {
         //递归方式实现
 //        return recursive(0L);
-        return loop();
+        String productTypesStr = (String) redisClient.get("productTypes").getObject();
+        List<ProductType> productTypes = JSON.parseArray(productTypesStr, ProductType.class);
+        if (productTypes == null || productTypes.size()<=0) {
+            productTypes = loop();
+            String jsonString = JSON.toJSONString(productTypes);
+            redisClient.set("productTypes", jsonString);
+        }
+        return productTypes;
     }
+
     /**
      * 递归方式
      * @return
